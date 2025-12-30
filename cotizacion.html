@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Cotización | Hospitality</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+        <span class="logo-icon">+</span>
+        <div class="logo-text">
+            <h1>Hospitality</h1>
+            <p>Servicios Médicos</p>
+        </div>
+    </a>
+</header>
+
+<section class="cotizacion-hero">
+    <h2>Solicita tu cotización médica</h2>
+    <p>
+        Completa el formulario o contáctanos directamente.
+    </p>
+</section>
+
+<section class="cotizacion">
+    <div class="cotizacion-grid">
+
+        <!-- FORMULARIO -->
+        <form id="formCotizacion" class="cotizacion-form">
+
+            <h3>Solicita tu cotización</h3>
+            <p class="form-intro">
+                Completa tus datos y un asesor se pondrá en contacto contigo.
+            </p>
+
+            <div class="form-row">
+                <div class="form-grupo">
+                    <label>Nombre completo</label>
+                    <input 
+                        type="text" 
+                        id="nombre"
+                        placeholder="Ej. Juan Pérez" 
+                        required>
+                </div>
+
+                <div class="form-grupo">
+                    <label>Teléfono</label>
+                    <input 
+                        type="tel" 
+                        id="telefono"
+                        placeholder="Ej. 646 123 4567" 
+                        required>
+                </div>
+            </div>
+
+            <div class="form-grupo">
+                <label>Correo electrónico</label>
+                <input 
+                    type="email" 
+                    id="email"
+                    placeholder="correo@ejemplo.com" 
+                    required>
+            </div>
+
+            <div class="form-grupo">
+                <label>Servicio de interés</label>
+                <select id="servicioSelect" required>
+
+                    <option value="">Selecciona un servicio</option>
+
+                    <!-- Médicas -->
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="medicina-general">Medicina General</option>
+                    <option value="traumatologia">Traumatología</option>
+                    <option value="ortopedia">Ortopedia</option>
+                    <option value="neurologia">Neurología</option>
+                    <option value="pediatria">Pediatría</option>
+                    <option value="ginecologia">Ginecología</option>
+                    <option value="dermatologia">Dermatología</option>
+                    <option value="gastroenterologia">Gastroenterología</option>
+                    <option value="nefrologia">Nefrología</option>
+                    <option value="neumologia">Neumología</option>
+                    <option value="endocrinologia">Endocrinología</option>
+                    <option value="oncologia">Oncología</option>
+                    <option value="oftalmologia">Oftalmología</option>
+                    <option value="urologia">Urología</option>
+
+                    <!-- Dentales -->
+                    <option value="odontologia">Odontología general</option>
+                    <option value="ortodoncia">Ortodoncia</option>
+                    <option value="implantologia">Implantología dental</option>
+                    <!-- Terapias -->
+                    <option value="quiropractica">Quiropráctica</option>
+                    <option value="fisioterapia">Fisioterapia</option>
+                    <option value="psicologia">Psicología</option>
+
+                    <!-- Diagnóstico -->
+                    <option value="laboratorio">Laboratorio clínico</option>
+                    <option value="checkup">Check-up médico</option>
+                </select>
+            </div>
+
+            <div class="form-grupo">
+                <label>Mensaje (opcional)</label>
+                <textarea 
+                    id="mensaje"
+                    rows="4" 
+                    placeholder="Cuéntanos brevemente tu necesidad"></textarea>
+            </div>
+
+            <button type="submit" class="btn-principal btn-full">
+                Solicitar cotización
+            </button>
+
+            <p class="form-nota">
+                🔒 Tus datos están protegidos y no serán compartidos.
+            </p>
+
+        </form>
+
+        <!-- CONTACTO DIRECTO -->
+        <div class="cotizacion-contacto">
+            <h3>Contacto inmediato</h3>
+
+            <a 
+                href="https://wa.me/526460000000" 
+                target="_blank" 
+                class="btn-whatsapp">
+                💬 WhatsApp
+            </a>
+
+            <p class="cotizacion-nota">
+                Respuesta rápida por WhatsApp o correo electrónico.
+            </p>
+
+            <div class="chat-placeholder">
+                💻 Chat en tiempo real (próximamente)
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+/* Cargar servicio desde URL */
+const params = new URLSearchParams(window.location.search);
+const servicio = params.get("servicio");
+
+if (servicio) {
+    document.getElementById("servicioSelect").value = servicio;
+}
+
+/* Envío por mailto */
+document.getElementById("formCotizacion").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const telefono = document.getElementById("telefono").value;
+    const email = document.getElementById("email").value;
+    const servicio = document.getElementById("servicioSelect").value;
+    const mensaje = document.getElementById("mensaje").value;
+
+    const body = `
+Nombre: ${nombre}
+Correo: ${email}
+Teléfono: ${telefono}
+Servicio: ${servicio}
+
+Mensaje:
+${mensaje}
+    `;
+
+    window.location.href =
+        "mailto:jjimenez@ateneaenelmar.com" +
+        "?subject=" + encodeURIComponent("Cotización médica - " + servicio) +
+        "&body=" + encodeURIComponent(body);
+});
+</script>
+
+</body>
+</html>

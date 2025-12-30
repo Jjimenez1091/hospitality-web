@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Hospitality</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo">
+    <span class="logo-icon">+</span>
+    <div class="logo-text">
+        <h1>Hospitality</h1>
+        <p>Servicios Médicos</p>
+    </div>
+    </a>
+
+    <nav class="nav">
+        <a href="#">Inicio</a>
+        <a href="#paquetes">Paquetes</a>
+        <a href="cotizacion.html">Contacto</a>
+    </nav>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-content">
+        <h2>Paquetes médicos profesionales para personas y empresas</h2>
+        <p>
+            Atención médica especializada con paquetes diseñados
+            para cuidar tu salud o la de tu equipo de trabajo.
+        </p>
+        <!--buscador-->
+        <div class="hero-search">
+        <input 
+        type="text" 
+        id="serviceSearch" 
+        placeholder="Busca un servicio médico (ej. cardiología, dentista…)"
+        autocomplete="off"
+        >
+        <div class="search-results" id="searchResults"></div>
+        </div>
+
+
+        <div class="hero-benefits">
+            <p><i class="fa-solid fa-user-doctor"></i> Atención profesional</p>
+            <p><i class="fa-solid fa-clock"></i> Respuesta rápida</p>
+            <p><i class="fa-solid fa-shield-heart"></i> Confidencialidad garantizada</p>
+        </div>
+
+        <div class="hero-actions">
+            <a href="cotizacion.html" class="btn-principal">Cotizar ahora</a>
+            <a href="#paquetes" class="btn-secundario-outline">Ver paquetes</a>
+        </div>
+    </div>
+</section>
+
+<!-- PAQUETES -->
+<section class="paquetes" id="servicios">
+    <h2>Nuestros Paquetes</h2>
+    <p class="paquetes-intro">
+        Soluciones médicas diseñadas para distintas necesidades de atención y alojamiento.
+    </p>
+
+    <div class="paquetes-grid">
+
+        <!-- QUIROPRÁCTICO -->
+        <article class="paquete-card">
+            <img src="img/quiropractico.jpg" alt="Quiropráctico">
+            <h3>Paquete Quiropráctico</h3>
+
+            <ul>
+                <li>✔ Hospital</li>
+                <li>✔ Servicio de traslado</li>
+                <li>✔ Hospedaje tipo Airbnb</li>
+                <li>✔ Atención especializada</li>
+            </ul>
+
+            <a href="cotizacion.html" class="btn-card">Cotizar ahora</a>
+        </article>
+
+        <!-- CARDIOLOGÍA -->
+        <article class="paquete-card">
+            <img src="img/cardiologia.jpg" alt="Cardiología">
+            <h3>Paquete Cardiología</h3>
+
+            <ul>
+                <li>✔ Evaluación cardiológica</li>
+                <li>✔ Estudios clínicos</li>
+                <li>✔ Hospitalización</li>
+                <li>✔ Traslado médico</li>
+            </ul>
+
+            <a href="cotizacion.html" class="btn-card">Cotizar ahora</a>
+        </article>
+
+        <!-- DENTISTA -->
+        <article class="paquete-card">
+            <img src="img/dentista.jpg" alt="Dentista">
+            <h3>Paquete Dental</h3>
+
+            <ul>
+                <li>✔ Consulta odontológica</li>
+                <li>✔ Tratamiento dental</li>
+                <li>✔ Material especializado</li>
+                <li>✔ Acompañamiento médico</li>
+            </ul>
+
+            <a href="cotizacion.html" class="btn-card">Cotizar ahora</a>
+        </article>
+
+    </div>
+</section>
+
+
+<!-- CONTACTO -->
+<section class="contacto" id="contacto">
+    <h2>Solicita tu cotización</h2>
+    <p>
+        Escríbenos y uno de nuestros asesores se pondrá en contacto contigo.
+    </p>
+
+    <a href="mailto:contacto@hospitality.com" class="btn-principal">
+        Enviar correo
+    </a>
+</section>
+
+<footer class="footer">
+    <div class="footer-bottom">
+        © 2025 Hospitality. Todos los derechos reservados.
+    </div>
+</footer>
+<script>
+    const hero = document.querySelector('.hero');
+
+    window.addEventListener('scroll', () => {
+        const scrollY = window.scrollY;
+        hero.style.backgroundPosition = `center ${scrollY * 0.4}px`;
+    });
+</script>
+<script>
+const services = [
+    // Médicas
+    { name: "Cardiología", link: "cotizacion.html?servicio=cardiologia" },
+    { name: "Medicina General", link: "cotizacion.html?servicio=medicina-general" },
+    { name: "Traumatología", link: "cotizacion.html?servicio=traumatologia" },
+    { name: "Ortopedia", link: "cotizacion.html?servicio=ortopedia" },
+    { name: "Neurología", link: "cotizacion.html?servicio=neurologia" },
+    { name: "Pediatría", link: "cotizacion.html?servicio=pediatria" },
+    { name: "Ginecología", link: "cotizacion.html?servicio=ginecologia" },
+    { name: "Dermatología", link: "cotizacion.html?servicio=dermatologia" },
+    { name: "Gastroenterología", link: "cotizacion.html?servicio=gastroenterologia" },
+    { name: "Nefrología", link: "cotizacion.html?servicio=nefrologia" },
+    { name: "Neumología", link: "cotizacion.html?servicio=neumologia" },
+    { name: "Endocrinología", link: "cotizacion.html?servicio=endocrinologia" },
+    { name: "Oncología", link: "cotizacion.html?servicio=oncologia" },
+    { name: "Oftalmología", link: "cotizacion.html?servicio=oftalmologia" },
+    { name: "Urología", link: "cotizacion.html?servicio=urologia" },
+
+    // Dentales
+    { name: "Dentista", link: "cotizacion.html?servicio=odontologia" },
+    { name: "Ortodoncia", link: "cotizacion.html?servicio=ortodoncia" },
+    { name: "Implantología dental", link: "cotizacion.html?servicio=implantologia" },
+
+    // Terapias
+    { name: "Quiropráctico", link: "cotizacion.html?servicio=quiropractica" },
+    { name: "Fisioterapia", link: "cotizacion.html?servicio=fisioterapia" },
+    { name: "Psicología", link: "cotizacion.html?servicio=psicologia" },
+
+    // Diagnóstico
+    { name: "Laboratorio clínico", link: "cotizacion.html?servicio=laboratorio" },
+    { name: "Check-up médico", link: "cotizacion.html?servicio=checkup" }
+];
+
+const searchInput = document.getElementById("serviceSearch");
+const resultsBox = document.getElementById("searchResults");
+
+searchInput.addEventListener("input", () => {
+    const value = searchInput.value.toLowerCase();
+    resultsBox.innerHTML = "";
+
+    if (!value) {
+        resultsBox.style.display = "none";
+        return;
+    }
+
+    const filtered = services.filter(service =>
+        service.name.toLowerCase().includes(value)
+    );
+
+    if (filtered.length === 0) {
+        resultsBox.style.display = "none";
+        return;
+    }
+
+    filtered.forEach(service => {
+        const div = document.createElement("div");
+        div.textContent = service.name;
+        div.onclick = () => {
+            window.location.href = service.link;
+        };
+        resultsBox.appendChild(div);
+    });
+
+    resultsBox.style.display = "block";
+});
+
+// Cerrar resultados al hacer click fuera
+document.addEventListener("click", (e) => {
+    if (!e.target.closest(".hero-search")) {
+        resultsBox.style.display = "none";
+    }
+});
+</script>
+
+</body>
+</html>

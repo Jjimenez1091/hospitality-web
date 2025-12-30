@@ -1,0 +1,387 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+/* HEADER */
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* LOGO */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-icon {
+    font-size: 28px;
+    color: #1c8adb;
+    font-weight: 600;
+}
+
+.logo-text h1 {
+    font-size: 22px;
+    margin: 0;
+    color: #0b3c5d;
+}
+
+.logo-text p {
+    margin: 0;
+    font-size: 12px;
+    color: #666;
+}
+
+/* NAV */
+.nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    color: #0b3c5d;
+    font-weight: 500;
+}
+
+/* HERO */
+.hero {
+    transition: background-position 0.05s linear;
+    min-height: 75vh;
+    background: linear-gradient(
+        rgba(11, 60, 93, 0.85),
+        rgba(11, 60, 93, 0.75)
+    ),
+    url('img/hero-medico.jpg');
+    background-size: cover;
+    background-position: center right;
+    display: flex;
+    align-items: center;
+    padding: 80px 80px;
+    color: white;
+    overflow: hidden; 
+}
+
+.hero-content {
+    max-width: 620px;
+}
+
+.hero h2 {
+    font-size: 46px;
+    line-height: 1.25;
+    margin-bottom: 25px;
+}
+.hero-content h2 {
+    max-width: 520px;
+}
+
+.hero-content p {
+    max-width: 500px;
+    opacity: 0.95;
+}
+
+.hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.hero-benefits {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 45px;
+    font-size: 14px;
+    opacity: 0.95;
+}
+
+.hero-benefits i {
+    color: #1c8adb;
+    margin-right: 6px;
+}
+
+.hero-benefits p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 20px;
+}
+
+/* BOTONES */
+.btn-principal {
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #1c8adb, #0b5fa5);
+    color: white;
+    padding: 14px 36px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-secundario-outline {
+    padding: 14px 34px;
+    border: 2px solid white;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+/* PAQUETES */
+.paquetes {
+    padding: 90px 60px;
+    background-color: #f4f7f9;
+    text-align: center;
+}
+
+.paquetes h2 {
+    font-size: 34px;
+    color: #0b3c5d;
+    margin-bottom: 10px;
+}
+
+.paquetes-intro {
+    margin-bottom: 60px;
+    color: #555;
+}
+
+.paquetes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+}
+
+.paquete-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.paquete-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0,0,0,0.15);
+}
+
+.paquete-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.paquete-card h3 {
+    color: #0b3c5d;
+    font-size: 20px;
+    margin: 25px;
+}
+
+.paquete-card ul {
+    list-style: none;
+    padding: 0 25px;
+    margin-bottom: 25px;
+}
+
+.paquete-card ul li {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.paquete-card .btn-card {
+    margin: 0 25px 30px;
+}
+
+.btn-card {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #1c8adb;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* CONTACTO */
+.contacto {
+    padding: 90px 60px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.contacto h2 {
+    font-size: 32px;
+    color: #0b3c5d;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+/* BUSCADOR HERO */
+.hero-search {
+    position: relative;
+    max-width: 620px;          /* MÁS GRANDE */
+    margin: 35px 0 45px;
+}
+
+.hero-search input {
+    width: 100%;
+    padding: 20px 22px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+.hero-search input::placeholder {
+    color: #999;
+}
+
+/* DROPDOWN RESULTADOS */
+.search-results {
+    position: absolute;
+    top: calc(100% + 10px);
+    left: 0;
+    right: 0;
+    background-color: #ffffff;     /* FONDO CORREGIDO */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(0,0,0,0.3);
+    display: none;
+    z-index: 20;
+}
+
+.search-results div {
+    padding: 14px 20px;
+    font-size: 14px;               /* TEXTO MÁS PEQUEÑO */
+    color: #0b3c5d;
+    cursor: pointer;
+    background-color: white;
+    transition: background 0.2s ease;
+}
+
+.search-results div:not(:last-child) {
+    border-bottom: 1px solid #eee;
+}
+
+.search-results div:hover {
+    background-color: #f4f7f9;
+}
+
+
+
+/* COTIZACIÓN */
+.cotizacion-hero {
+    background-color: #0b3c5d;
+    color: white;
+    padding: 80px 60px;
+    text-align: center;
+}
+
+.cotizacion {
+    padding: 80px 60px;
+}
+
+.cotizacion-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 60px;
+}
+
+.cotizacion-form,
+.cotizacion-contacto {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #25d366;
+    color: white;
+    padding: 14px 30px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 20px 0;
+}
+
+.chat-placeholder {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #f4f7f9;
+    border-radius: 6px;
+    text-align: center;
+    color: #666;
+}
+/* FORMULARIO COTIZACIÓN MEJORADO */
+.cotizacion-form h3 {
+    font-size: 26px;
+    color: #0b3c5d;
+    margin-bottom: 8px;
+}
+
+.form-intro {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.cotizacion-form .form-grupo label {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 6px;
+    display: block;
+    color: #333;
+}
+
+.cotizacion-form input,
+.cotizacion-form select,
+.cotizacion-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    background-color: #fafafa;
+}
+
+.cotizacion-form input:focus,
+.cotizacion-form select:focus,
+.cotizacion-form textarea:focus {
+    outline: none;
+    border-color: #1c8adb;
+    background-color: white;
+}
+
+.form-nota {
+    font-size: 12px;
+    color: #777;
+    text-align: center;
+    margin-top: 18px;
+}
