@@ -2,8 +2,11 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Cotización | Hospitality</title>
+    <title data-es="Cotización | Hospitality" data-en="Quote | Hospitality">
+        Cotización | Hospitality
+    </title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -14,14 +17,27 @@
         <span class="logo-icon">+</span>
         <div class="logo-text">
             <h1>Hospitality</h1>
-            <p>Servicios Médicos</p>
+            <p data-es="Servicios Médicos" data-en="Medical Services">
+                Servicios Médicos
+            </p>
         </div>
     </a>
+
+    <!-- BOTÓN IDIOMA -->
+    <div class="lang-switch">
+        <button onclick="setLanguage('es')">ES</button>
+        <button onclick="setLanguage('en')">EN</button>
+    </div>
 </header>
 
 <section class="cotizacion-hero">
-    <h2>Solicita tu cotización médica</h2>
-    <p>
+    <h2 data-es="Solicita tu cotización médica"
+        data-en="Request your medical quote">
+        Solicita tu cotización médica
+    </h2>
+
+    <p data-es="Completa el formulario o contáctanos directamente."
+       data-en="Fill out the form or contact us directly.">
         Completa el formulario o contáctanos directamente.
     </p>
 </section>
@@ -32,151 +48,154 @@
         <!-- FORMULARIO -->
         <form id="formCotizacion" class="cotizacion-form">
 
-            <h3>Solicita tu cotización</h3>
-            <p class="form-intro">
-                Completa tus datos y un asesor se pondrá en contacto contigo.
+            <h3 data-es="Solicita tu cotización"
+                data-en="Request your quote">
+                Solicita tu cotización
+            </h3>
+
+            <p class="form-intro"
+               data-es="Completa tus datos y un asesor se pondrá en contacto contigo."
+               data-en="Fill in your details and an advisor will contact you.">
+               Completa tus datos y un asesor se pondrá en contacto contigo.
             </p>
 
             <div class="form-row">
                 <div class="form-grupo">
-                    <label>Nombre completo</label>
-                    <input 
-                        type="text" 
-                        id="nombre"
-                        placeholder="Ej. Juan Pérez" 
+                    <label data-es="Nombre completo" data-en="Full name">Nombre completo</label>
+                    <input type="text" id="nombre"
+                        data-es-placeholder="Ej. Juan Pérez"
+                        data-en-placeholder="E.g. John Smith"
+                        placeholder="Ej. Juan Pérez"
                         required>
                 </div>
 
                 <div class="form-grupo">
-                    <label>Teléfono</label>
-                    <input 
-                        type="tel" 
-                        id="telefono"
-                        placeholder="Ej. 646 123 4567" 
+                    <label data-es="Teléfono" data-en="Phone">Teléfono</label>
+                    <input type="tel" id="telefono"
+                        data-es-placeholder="Ej. 646 123 4567"
+                        data-en-placeholder="E.g. +1 555 123 4567"
+                        placeholder="Ej. 646 123 4567"
                         required>
                 </div>
             </div>
 
             <div class="form-grupo">
-                <label>Correo electrónico</label>
-                <input 
-                    type="email" 
-                    id="email"
-                    placeholder="correo@ejemplo.com" 
+                <label data-es="Correo electrónico" data-en="Email">Correo electrónico</label>
+                <input type="email" id="email"
+                    data-es-placeholder="correo@ejemplo.com"
+                    data-en-placeholder="email@example.com"
+                    placeholder="correo@ejemplo.com"
                     required>
             </div>
 
             <div class="form-grupo">
-                <label>Servicio de interés</label>
+                <label data-es="Servicio de interés" data-en="Service of interest">
+                    Servicio de interés
+                </label>
+
                 <select id="servicioSelect" required>
+                    <option value=""
+                        data-es="Selecciona un servicio"
+                        data-en="Select a service">
+                        Selecciona un servicio
+                    </option>
 
-                    <option value="">Selecciona un servicio</option>
-
-                    <!-- Médicas -->
-                    <option value="cardiologia">Cardiología</option>
-                    <option value="medicina-general">Medicina General</option>
-                    <option value="traumatologia">Traumatología</option>
-                    <option value="ortopedia">Ortopedia</option>
-                    <option value="neurologia">Neurología</option>
-                    <option value="pediatria">Pediatría</option>
-                    <option value="ginecologia">Ginecología</option>
-                    <option value="dermatologia">Dermatología</option>
-                    <option value="gastroenterologia">Gastroenterología</option>
-                    <option value="nefrologia">Nefrología</option>
-                    <option value="neumologia">Neumología</option>
-                    <option value="endocrinologia">Endocrinología</option>
-                    <option value="oncologia">Oncología</option>
-                    <option value="oftalmologia">Oftalmología</option>
-                    <option value="urologia">Urología</option>
-
-                    <!-- Dentales -->
-                    <option value="odontologia">Odontología general</option>
-                    <option value="ortodoncia">Ortodoncia</option>
-                    <option value="implantologia">Implantología dental</option>
-                    <!-- Terapias -->
-                    <option value="quiropractica">Quiropráctica</option>
-                    <option value="fisioterapia">Fisioterapia</option>
-                    <option value="psicologia">Psicología</option>
-
-                    <!-- Diagnóstico -->
-                    <option value="laboratorio">Laboratorio clínico</option>
-                    <option value="checkup">Check-up médico</option>
+                    <option value="cardiologia" data-es="Cardiología" data-en="Cardiology">Cardiología</option>
+                    <option value="neurologia" data-es="Neurología" data-en="Neurology">Neurología</option>
+                    <option value="odontologia" data-es="Odontología" data-en="Dentistry">Odontología</option>
+                    <option value="quiropractica" data-es="Quiropráctica" data-en="Chiropractic">Quiropráctica</option>
+                    <option value="fisioterapia" data-es="Fisioterapia" data-en="Physical Therapy">Fisioterapia</option>
+                    <option value="psicologia" data-es="Psicología" data-en="Psychology">Psicología</option>
+                    <option value="checkup" data-es="Check-up médico" data-en="Medical Check-up">Check-up médico</option>
                 </select>
             </div>
 
             <div class="form-grupo">
-                <label>Mensaje (opcional)</label>
-                <textarea 
-                    id="mensaje"
-                    rows="4" 
+                <label data-es="Mensaje (opcional)" data-en="Message (optional)">
+                    Mensaje (opcional)
+                </label>
+                <textarea id="mensaje" rows="4"
+                    data-es-placeholder="Cuéntanos brevemente tu necesidad"
+                    data-en-placeholder="Briefly tell us your needs"
                     placeholder="Cuéntanos brevemente tu necesidad"></textarea>
             </div>
 
-            <button type="submit" class="btn-principal btn-full">
+            <button type="submit" class="btn-principal btn-full"
+                data-es="Solicitar cotización"
+                data-en="Request quote">
                 Solicitar cotización
             </button>
 
-            <p class="form-nota">
-                🔒 Tus datos están protegidos y no serán compartidos.
+            <p class="form-nota"
+               data-es="🔒 Tus datos están protegidos y no serán compartidos."
+               data-en="🔒 Your data is protected and will not be shared.">
+               🔒 Tus datos están protegidos y no serán compartidos.
             </p>
-
         </form>
 
-        <!-- CONTACTO DIRECTO -->
+        <!-- CONTACTO -->
         <div class="cotizacion-contacto">
-            <h3>Contacto inmediato</h3>
+            <h3 data-es="Contacto inmediato" data-en="Immediate contact">
+                Contacto inmediato
+            </h3>
 
-            <a 
-                href="https://wa.me/526460000000" 
-                target="_blank" 
-                class="btn-whatsapp">
+            <a href="https://wa.me/526460000000" target="_blank" class="btn-whatsapp">
                 💬 WhatsApp
             </a>
 
-            <p class="cotizacion-nota">
-                Respuesta rápida por WhatsApp o correo electrónico.
+            <p class="cotizacion-nota"
+               data-es="Respuesta rápida por WhatsApp o correo electrónico."
+               data-en="Fast response via WhatsApp or email.">
+               Respuesta rápida por WhatsApp o correo electrónico.
             </p>
-
-            <div class="chat-placeholder">
-                💻 Chat en tiempo real (próximamente)
-            </div>
         </div>
 
     </div>
 </section>
 
 <script>
-/* Cargar servicio desde URL */
-const params = new URLSearchParams(window.location.search);
-const servicio = params.get("servicio");
+/* ===== IDIOMA ===== */
+let currentLang = localStorage.getItem("lang") || "es";
 
-if (servicio) {
-    document.getElementById("servicioSelect").value = servicio;
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-es]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
+    });
+
+    document.querySelectorAll("input[data-es-placeholder], textarea[data-es-placeholder]").forEach(el => {
+        el.placeholder = el.getAttribute(`data-${lang}-placeholder`);
+    });
 }
 
-/* Envío por mailto */
+document.addEventListener("DOMContentLoaded", () => {
+    setLanguage(currentLang);
+
+    /* Servicio desde URL */
+    const params = new URLSearchParams(window.location.search);
+    const servicio = params.get("servicio");
+    if (servicio) document.getElementById("servicioSelect").value = servicio;
+});
+
+/* ===== MAILTO ===== */
 document.getElementById("formCotizacion").addEventListener("submit", function(e) {
     e.preventDefault();
 
-    const nombre = document.getElementById("nombre").value;
-    const telefono = document.getElementById("telefono").value;
-    const email = document.getElementById("email").value;
-    const servicio = document.getElementById("servicioSelect").value;
-    const mensaje = document.getElementById("mensaje").value;
-
     const body = `
-Nombre: ${nombre}
-Correo: ${email}
-Teléfono: ${telefono}
-Servicio: ${servicio}
+Name: ${nombre.value}
+Email: ${email.value}
+Phone: ${telefono.value}
+Service: ${servicioSelect.value}
 
-Mensaje:
-${mensaje}
+Message:
+${mensaje.value}
     `;
 
     window.location.href =
         "mailto:jjimenez@ateneaenelmar.com" +
-        "?subject=" + encodeURIComponent("Cotización médica - " + servicio) +
+        "?subject=" + encodeURIComponent("Medical quote request") +
         "&body=" + encodeURIComponent(body);
 });
 </script>

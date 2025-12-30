@@ -14,208 +14,264 @@
 
 <header class="header">
     <a href="index.html" class="logo">
-    <span class="logo-icon">+</span>
-    <div class="logo-text">
-        <h1>Hospitality</h1>
-        <p>Servicios Médicos</p>
-    </div>
+        <span class="logo-icon">+</span>
+        <div class="logo-text">
+            <h1>Hospitality</h1>
+            <p data-es="Servicios Médicos" data-en="Medical Services">
+                Servicios Médicos
+            </p>
+        </div>
     </a>
 
     <nav class="nav">
-        <a href="#">Inicio</a>
-        <a href="#paquetes">Paquetes</a>
-        <a href="cotizacion.html">Contacto</a>
+        <a href="#" data-es="Inicio" data-en="Home">Inicio</a>
+        <a href="#paquetes" data-es="Paquetes" data-en="Packages">Paquetes</a>
+        <a href="cotizacion.html" data-es="Contacto" data-en="Contact">Contacto</a>
     </nav>
+
+    <!-- BOTÓN IDIOMA (AQUÍ ES DONDE VA) -->
+    <div class="lang-switch">
+        <button onclick="setLanguage('es')">ES</button>
+        <button onclick="setLanguage('en')">EN</button>
+    </div>
 </header>
+
 
 <!-- HERO -->
 <section class="hero">
     <div class="hero-content">
-        <h2>Paquetes médicos profesionales para personas y empresas</h2>
-        <p>
-            Atención médica especializada con paquetes diseñados
-            para cuidar tu salud o la de tu equipo de trabajo.
+        <h2 data-es="Paquetes médicos profesionales para personas y empresas"
+            data-en="Professional medical packages for individuals and companies">
+            Paquetes médicos profesionales para personas y empresas
+        </h2>
+
+        <p data-es="Atención médica especializada con paquetes diseñados para cuidar tu salud o la de tu equipo."
+           data-en="Specialized medical care with packages designed to protect your health or your team.">
+            Atención médica especializada con paquetes diseñados para cuidar tu salud o la de tu equipo.
         </p>
-        <!--buscador-->
+
+        <!-- BUSCADOR -->
         <div class="hero-search">
-        <input 
-        type="text" 
-        id="serviceSearch" 
-        placeholder="Busca un servicio médico (ej. cardiología, dentista…)"
-        autocomplete="off"
-        >
-        <div class="search-results" id="searchResults"></div>
-        </div>
-
-
-        <div class="hero-benefits">
-            <p><i class="fa-solid fa-user-doctor"></i> Atención profesional</p>
-            <p><i class="fa-solid fa-clock"></i> Respuesta rápida</p>
-            <p><i class="fa-solid fa-shield-heart"></i> Confidencialidad garantizada</p>
+            <input
+                type="text"
+                id="serviceSearch"
+                data-es-placeholder="Busca un servicio médico (ej. cardiología, dentista...)"
+                data-en-placeholder="Search a medical service (e.g. cardiology, dentist...)"
+                placeholder="Busca un servicio médico"
+                autocomplete="off"
+            >
+            <div class="search-results" id="searchResults"></div>
         </div>
 
         <div class="hero-actions">
-            <a href="cotizacion.html" class="btn-principal">Cotizar ahora</a>
-            <a href="#paquetes" class="btn-secundario-outline">Ver paquetes</a>
+            <a href="cotizacion.html" class="btn-principal"
+               data-es="Cotizar ahora" data-en="Get a quote">Cotizar ahora</a>
         </div>
     </div>
 </section>
 
 <!-- PAQUETES -->
-<section class="paquetes" id="servicios">
-    <h2>Nuestros Paquetes</h2>
-    <p class="paquetes-intro">
-        Soluciones médicas diseñadas para distintas necesidades de atención y alojamiento.
-    </p>
+<section class="paquetes" id="paquetes">
+    <h2 data-es="Nuestros Paquetes" data-en="Our Packages">Nuestros Paquetes</h2>
 
     <div class="paquetes-grid">
 
-        <!-- QUIROPRÁCTICO -->
+        <!-- QUIRO -->
         <article class="paquete-card">
-            <img src="img/quiropractico.jpg" alt="Quiropráctico">
-            <h3>Paquete Quiropráctico</h3>
-
+            <img src="img/quiropractico.jpg">
+            <h3 data-es="Paquete Quiropráctico" data-en="Chiropractic Package">Paquete Quiropráctico</h3>
             <ul>
-                <li>✔ Hospital</li>
-                <li>✔ Servicio de traslado</li>
-                <li>✔ Hospedaje tipo Airbnb</li>
-                <li>✔ Atención especializada</li>
+                <li data-es="Hospital" data-en="Hospital">Hospital</li>
+                <li data-es="Traslado médico" data-en="Medical transportation">Traslado médico</li>
+                <li data-es="Hospedaje" data-en="Accommodation">Hospedaje</li>
+                <li data-es="Atención especializada" data-en="Specialized care">Atención especializada</li>
             </ul>
-
-            <a href="cotizacion.html" class="btn-card">Cotizar ahora</a>
+            <a href="cotizacion.html?servicio=quiropractica" class="btn-card">Cotizar</a>
         </article>
 
-        <!-- CARDIOLOGÍA -->
+        <!-- CARDIO -->
         <article class="paquete-card">
-            <img src="img/cardiologia.jpg" alt="Cardiología">
-            <h3>Paquete Cardiología</h3>
-
+            <img src="img/cardiologia.jpg">
+            <h3 data-es="Paquete Cardiología" data-en="Cardiology Package">Paquete Cardiología</h3>
             <ul>
-                <li>✔ Evaluación cardiológica</li>
-                <li>✔ Estudios clínicos</li>
-                <li>✔ Hospitalización</li>
-                <li>✔ Traslado médico</li>
+                <li data-es="Evaluación cardiológica" data-en="Cardiac evaluation">Evaluación cardiológica</li>
+                <li data-es="Estudios clínicos" data-en="Clinical tests">Estudios clínicos</li>
+                <li data-es="Hospitalización" data-en="Hospitalization">Hospitalización</li>
+                <li data-es="Traslado médico" data-en="Medical transportation">Traslado médico</li>
             </ul>
-
-            <a href="cotizacion.html" class="btn-card">Cotizar ahora</a>
+            <a href="cotizacion.html?servicio=cardiologia" class="btn-card">Cotizar</a>
         </article>
 
-        <!-- DENTISTA -->
+        <!-- DENTAL -->
         <article class="paquete-card">
-            <img src="img/dentista.jpg" alt="Dentista">
-            <h3>Paquete Dental</h3>
-
+            <img src="img/dentista.jpg">
+            <h3 data-es="Paquete Dental" data-en="Dental Package">Paquete Dental</h3>
             <ul>
-                <li>✔ Consulta odontológica</li>
-                <li>✔ Tratamiento dental</li>
-                <li>✔ Material especializado</li>
-                <li>✔ Acompañamiento médico</li>
+                <li data-es="Consulta odontológica" data-en="Dental consultation">Consulta odontológica</li>
+                <li data-es="Tratamiento dental" data-en="Dental treatment">Tratamiento dental</li>
+                <li data-es="Material especializado" data-en="Specialized materials">Material especializado</li>
+                <li data-es="Acompañamiento médico" data-en="Medical assistance">Acompañamiento médico</li>
             </ul>
-
-            <a href="cotizacion.html" class="btn-card">Cotizar ahora</a>
+            <a href="cotizacion.html?servicio=odontologia" class="btn-card">Cotizar</a>
         </article>
 
     </div>
 </section>
 
-
-<!-- CONTACTO -->
-<section class="contacto" id="contacto">
-    <h2>Solicita tu cotización</h2>
-    <p>
-        Escríbenos y uno de nuestros asesores se pondrá en contacto contigo.
-    </p>
-
-    <a href="mailto:contacto@hospitality.com" class="btn-principal">
-        Enviar correo
-    </a>
-</section>
-
+<!-- FOOTER PROFESIONAL -->
 <footer class="footer">
-    <div class="footer-bottom">
-        © 2025 Hospitality. Todos los derechos reservados.
+    <div class="footer-container">
+
+        <!-- COLUMNA 1 -->
+        <div class="footer-col">
+            <h3
+                data-es="Hospitality"
+                data-en="Hospitality">
+                Hospitality
+            </h3>
+
+            <p
+                data-es="Servicios médicos integrales enfocados en calidad, confianza y atención personalizada."
+                data-en="Comprehensive medical services focused on quality, trust, and personalized care.">
+                Servicios médicos integrales enfocados en calidad, confianza y atención personalizada.
+            </p>
+        </div>
+
+        <!-- COLUMNA 2 -->
+        <div class="footer-col">
+            <h4
+                data-es="Servicios"
+                data-en="Services">
+                Servicios
+            </h4>
+
+            <ul>
+                <li
+                    data-es="Consultas médicas"
+                    data-en="Medical consultations">
+                    Consultas médicas
+                </li>
+                <li
+                    data-es="Especialidades médicas"
+                    data-en="Medical specialties">
+                    Especialidades médicas
+                </li>
+                <li
+                    data-es="Check-up médico"
+                    data-en="Medical check-up">
+                    Check-up médico
+                </li>
+                <li
+                    data-es="Laboratorio clínico"
+                    data-en="Clinical laboratory">
+                    Laboratorio clínico
+                </li>
+            </ul>
+        </div>
+
+        <!-- COLUMNA 3 -->
+        <div class="footer-col">
+            <h4
+                data-es="Contacto"
+                data-en="Contact">
+                Contacto
+            </h4>
+
+            <ul class="footer-contact">
+                <li>
+                    📧 <a href="mailto:contacto@hospitality.com">
+                        contacto@hospitality.com
+                    </a>
+                </li>
+                <li>
+                    📞 <a href="tel:+526461234567">
+                        +52 646 000 0000
+                    </a>
+                </li>
+                <li>
+                    💬 <a
+                        href="https://wa.me/526460000000"
+                        target="_blank"
+                        data-es="WhatsApp"
+                        data-en="WhatsApp">
+                        WhatsApp
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- COLUMNA 4 -->
+        <div class="footer-col">
+            <h4
+                data-es="Horario de atención"
+                data-en="Office hours">
+                Horario de atención
+            </h4>
+
+            <p
+                data-es="Lunes a Viernes 8:00 am – 6:00 pm"
+                data-en="Monday to Friday 8:00 am – 6:00 pm">
+                Lunes a Viernes
+                8:00 am – 6:00 pm
+            </p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom"
+        data-es="© 2025 Hospitality · Todos los derechos reservados"
+        data-en="© 2025 Hospitality · All rights reserved">
+        © 2025 Hospitality · Todos los derechos reservados
     </div>
 </footer>
-<script>
-    const hero = document.querySelector('.hero');
 
-    window.addEventListener('scroll', () => {
-        const scrollY = window.scrollY;
-        hero.style.backgroundPosition = `center ${scrollY * 0.4}px`;
+
+<script>
+let currentLang = localStorage.getItem("lang") || "es";
+function setLanguage(lang) {
+    currentLang = lang;
+    localStorage.setItem("lang", lang);
+
+    document.querySelectorAll("[data-es]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
     });
+
+    document.querySelectorAll("input[data-es-placeholder]").forEach(i => {
+        i.placeholder = i.getAttribute(`data-${lang}-placeholder`);
+    });
+}
+document.addEventListener("DOMContentLoaded", () => setLanguage(currentLang));
 </script>
+
 <script>
 const services = [
-    // Médicas
-    { name: "Cardiología", link: "cotizacion.html?servicio=cardiologia" },
-    { name: "Medicina General", link: "cotizacion.html?servicio=medicina-general" },
-    { name: "Traumatología", link: "cotizacion.html?servicio=traumatologia" },
-    { name: "Ortopedia", link: "cotizacion.html?servicio=ortopedia" },
-    { name: "Neurología", link: "cotizacion.html?servicio=neurologia" },
-    { name: "Pediatría", link: "cotizacion.html?servicio=pediatria" },
-    { name: "Ginecología", link: "cotizacion.html?servicio=ginecologia" },
-    { name: "Dermatología", link: "cotizacion.html?servicio=dermatologia" },
-    { name: "Gastroenterología", link: "cotizacion.html?servicio=gastroenterologia" },
-    { name: "Nefrología", link: "cotizacion.html?servicio=nefrologia" },
-    { name: "Neumología", link: "cotizacion.html?servicio=neumologia" },
-    { name: "Endocrinología", link: "cotizacion.html?servicio=endocrinologia" },
-    { name: "Oncología", link: "cotizacion.html?servicio=oncologia" },
-    { name: "Oftalmología", link: "cotizacion.html?servicio=oftalmologia" },
-    { name: "Urología", link: "cotizacion.html?servicio=urologia" },
-
-    // Dentales
-    { name: "Dentista", link: "cotizacion.html?servicio=odontologia" },
-    { name: "Ortodoncia", link: "cotizacion.html?servicio=ortodoncia" },
-    { name: "Implantología dental", link: "cotizacion.html?servicio=implantologia" },
-
-    // Terapias
-    { name: "Quiropráctico", link: "cotizacion.html?servicio=quiropractica" },
-    { name: "Fisioterapia", link: "cotizacion.html?servicio=fisioterapia" },
-    { name: "Psicología", link: "cotizacion.html?servicio=psicologia" },
-
-    // Diagnóstico
-    { name: "Laboratorio clínico", link: "cotizacion.html?servicio=laboratorio" },
-    { name: "Check-up médico", link: "cotizacion.html?servicio=checkup" }
+    {es:"Cardiología", en:"Cardiology", v:"cardiologia"},
+    {es:"Neurología", en:"Neurology", v:"neurologia"},
+    {es:"Odontología", en:"Dentistry", v:"odontologia"},
+    {es:"Quiropráctica", en:"Chiropractic", v:"quiropractica"},
+    {es:"Fisioterapia", en:"Physical Therapy", v:"fisioterapia"},
+    {es:"Psicología", en:"Psychology", v:"psicologia"},
+    {es:"Check-up médico", en:"Medical Check-up", v:"checkup"}
 ];
 
-const searchInput = document.getElementById("serviceSearch");
-const resultsBox = document.getElementById("searchResults");
+const input = document.getElementById("serviceSearch");
+const results = document.getElementById("searchResults");
 
-searchInput.addEventListener("input", () => {
-    const value = searchInput.value.toLowerCase();
-    resultsBox.innerHTML = "";
+input.addEventListener("input", () => {
+    const v = input.value.toLowerCase();
+    results.innerHTML = "";
+    if (!v) return results.style.display="none";
 
-    if (!value) {
-        resultsBox.style.display = "none";
-        return;
-    }
-
-    const filtered = services.filter(service =>
-        service.name.toLowerCase().includes(value)
-    );
-
-    if (filtered.length === 0) {
-        resultsBox.style.display = "none";
-        return;
-    }
-
-    filtered.forEach(service => {
-        const div = document.createElement("div");
-        div.textContent = service.name;
-        div.onclick = () => {
-            window.location.href = service.link;
-        };
-        resultsBox.appendChild(div);
+    services.filter(s =>
+        (currentLang==="en"?s.en:s.es).toLowerCase().includes(v)
+    ).forEach(s=>{
+        const d=document.createElement("div");
+        d.textContent=currentLang==="en"?s.en:s.es;
+        d.onclick=()=>location.href=`cotizacion.html?servicio=${s.v}`;
+        results.appendChild(d);
     });
 
-    resultsBox.style.display = "block";
-});
-
-// Cerrar resultados al hacer click fuera
-document.addEventListener("click", (e) => {
-    if (!e.target.closest(".hero-search")) {
-        resultsBox.style.display = "none";
-    }
+    results.style.display="block";
 });
 </script>
 

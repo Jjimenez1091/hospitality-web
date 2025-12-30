@@ -12,8 +12,18 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    transition: box-shadow 0.3s ease;
+}
+body:has(.header) {
+    scroll-behavior: smooth;
 }
 
+.header.scrolled {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+}
 /* LOGO */
 .logo {
     display: flex;
@@ -227,9 +237,51 @@ body {
 .footer {
     background-color: #0b3c5d;
     color: white;
-    padding: 20px;
-    text-align: center;
+    padding: 35px 60px 20px;
 }
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+.footer h3,
+.footer h4 {
+    margin-bottom: 14px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.footer p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #d0dce6;
+}
+
+.footer a {
+    display: block;
+    font-size: 14px;
+    color: #d0dce6;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+.footer a:hover {
+    color: #1c8adb;
+}
+
+.footer-bottom {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    text-align: center;
+    font-size: 13px;
+    color: #c5d3df;
+}
+
 /* BUSCADOR HERO */
 .hero-search {
     position: relative;
@@ -384,4 +436,22 @@ body {
     color: #777;
     text-align: center;
     margin-top: 18px;
+}
+.lang-switch {
+    display: flex;
+    gap: 8px;
+}
+
+.lang-switch button {
+   background: transparent;
+    border: 1px solid #0b3c5d;
+    color: #0b3c5d;
+    padding: 4px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+}
+
+.lang-switch button:hover {
+    background: rgba(11, 60, 93, 0.1);
 }
