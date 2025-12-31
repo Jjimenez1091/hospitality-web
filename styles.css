@@ -68,7 +68,7 @@ body:has(.header) {
         rgba(11, 60, 93, 0.85),
         rgba(11, 60, 93, 0.75)
     ),
-    url('img/hero-medico.jpg');
+    url('img/hero-medico.png');
     background-size: cover;
     background-position: center right;
     display: flex;
